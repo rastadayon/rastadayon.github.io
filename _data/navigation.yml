@@ -10,19 +10,19 @@ main:
 
   # - title: "Talks"
   #   url: /talks/   
-   
+
   - title: "Projects"
     url: /year-archive/
 
   - title: "Teaching"
     url: /teaching/    
     
-  # - title: "Portfolio"
-  #   url: /portfolio/
+  - title: "Portfolio"
+    url: /portfolio/
         
     
   - title: "CV"
     url: /cv/
     
-  - title: "Guide"
-    url: /markdown/
+  # - title: "Guide"
+  #   url: /markdown/

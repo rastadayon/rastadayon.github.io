@@ -16,7 +16,10 @@ layout: compress
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    {{ content }}
+    <!-- Main content of the page rendered here -->
+    <div class="page__content">
+      {{ content }}
+    </div>
 
     <div class="page__footer">
       <footer>
@@ -26,6 +29,46 @@ layout: compress
     </div>
 
     {% include scripts.html %}
+    
+    <!-- Scroll behavior script -->
+    <script>
+      document.addEventListener('wheel', function(event) {
+        if (event.deltaY > 0) {
+          scrollToNextSection();
+        } else {
+          scrollToPreviousSection();
+        }
+      });
+
+      function scrollToNextSection() {
+        let currentSection = getCurrentSection();
+        let nextSection = currentSection.nextElementSibling;
+        if (nextSection) {
+          nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      function scrollToPreviousSection() {
+        let currentSection = getCurrentSection();
+        let previousSection = currentSection.previousElementSibling;
+        if (previousSection) {
+          previousSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      function getCurrentSection() {
+        // Add a specific class to sections, e.g., .section, for smooth scrolling
+        let sections = document.querySelectorAll('.section');
+        let currentSection = null;
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 0 && rect.bottom > 0) {
+            currentSection = section;
+          }
+        });
+        return currentSection;
+      }
+    </script>
 
   </body>
 </html>

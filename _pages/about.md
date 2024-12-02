@@ -20,5 +20,6 @@ News
 
 - **[July 2024]**: Our paper [Gone With the Bits: Benchmarking Bias in Facial Phenotype Degradation Under Low-Rate Neural Compression](https://openreview.net/pdf?id=zIrvyQdIG4) was accepted to *ICML 2024 Next Generation of AI Safety Workshop*
 - **[June 2024]**: Joined [Jeong Lab](https://haewonjeong.com/) at UC Santa Barbara
-- **[Aug 2023]**: Attended my first conference SIGKDD 2023 as a volunteer and proxy presenter
+- **[Aug 2023]**: Attended my first conference SIGKDD 2023 as a student volunteer and proxy presenter
 - **[September 2022]**: Started my PhD in computer science at UC Santa Barbara
+- **[June 2022]**: Completed my BSc in Computer Engineering at the University of Tehran, graduating in the top 15% of my class
