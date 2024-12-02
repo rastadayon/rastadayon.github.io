@@ -25,7 +25,10 @@
           alt="">
       </div>
     {% endif %}
-
+    
+    {%if post.collection == 'teaching'%}
+    <hr>
+    {%endif%}
     <h3 class="archive__item-title" itemprop="headline">
       {{ title }}
     </h3>
@@ -35,7 +38,7 @@
     {% endif %}
 
         {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+        <p> {{ post.type }}, <i>{{ post.venue }}</i> {% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
         {% elsif post.collection == 'publications' and post.category != 'preprints' %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' and post.category == 'preprints' %}

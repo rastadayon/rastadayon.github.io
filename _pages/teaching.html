@@ -5,6 +5,36 @@ permalink: /teaching/
 author_profile: true
 ---
 
+<style>
+  h3.archive__item-title {
+    width: 800px; /* Adjust the width of the paper title */
+    color: #1A3D7C;  /* Change to your desired color (e.g., orange) */
+    font-weight: bold; /* Optional: Make it bold */
+    margin-top: 0%;
+  }
+
+  .archive__item p {
+    margin-bottom: 0.3rem; /* Reduce space between paragraphs */
+    font-size: 0.9em;
+  }
+  .archive__item li {
+    margin-bottom: 0.3rem; /* Reduce space between list items */
+    font-size: 0.8em; /* Match the font size of paragraphs */
+    list-style: none; /* Remove default bullet */
+    position: relative; /* Position for custom bullet */
+    padding-left: 1.2em; /* Add space for the custom bullet */
+  }
+
+  .archive__item li::before {
+    content: '>'; /* Custom bullet character */
+    position: absolute;
+    left: 0; /* Position the custom bullet */
+    color: #1A3D7C; /* Optional: Set bullet color */
+    font-weight: bold; /* Optional: Make bullet bold */
+  }
+  
+</style>
+
 {% include base_path %}
 
 {% for post in site.teaching reversed %}
