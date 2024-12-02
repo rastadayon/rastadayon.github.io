@@ -6,10 +6,35 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can find my articles on my <a href="{{site.author.googlescholar}}">Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
+
+<style>
+  h3.archive__item-title {
+    width: 800px; /* Adjust the width of the paper title */
+    color: #1A3D7C;  /* Change to your desired color (e.g., orange) */
+    font-weight: bold; /* Optional: Make it bold */
+    margin-top: 0%;
+  }
+  .archive__item p {
+      margin-bottom: 0.4rem; /* Reduce space between paragraphs */
+      font-size: 0.8em;
+  }
+
+  .archive__item p + p {
+      margin-top: 0; /* Remove space between consecutive paragraphs */
+  }
+  .archive__item-citation {
+    color: gray;
+  }
+  /*.category-title {
+    font-size: 2em; /* Adjust size as needed */
+    /*font-weight: bold; /* Optional: bold for emphasis */
+    /*margin-bottom: 0.5em; /* Optional: space below the title */
+  /*}*/
+</style>
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
@@ -20,7 +45,7 @@ author_profile: true
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        <h2 class="category-title">{{ category[1].title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
       {% include archive-single.html %}
